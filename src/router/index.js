@@ -6,13 +6,19 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'clients',
       component: ClientsView,
+      props:{
+        title:'Clients',
+      }
     },
     {
       path: '/add-client',
       name: 'addClient',
       component: () => import('../views/AddClientView.vue'),
+      props:{
+        title:'Add Client',
+      }
     },
   ],
 })

@@ -1,6 +1,12 @@
 <script setup>
 import RouterLink from '@/components/UI/RouterLink.vue'
 import Heading from '@/components/UI/Heading.vue'
+
+defineProps({
+  title: {
+    type: String,
+  }
+})
 </script>
 
 <template>
@@ -10,6 +16,6 @@ import Heading from '@/components/UI/Heading.vue'
         Add Client
       </RouterLink>
     </div>
-    <Heading>Clients</Heading>
+    <Heading>{{ title }}</Heading>
   </div>
 </template>
