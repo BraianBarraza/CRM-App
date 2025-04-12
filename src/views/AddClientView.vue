@@ -1,5 +1,4 @@
 <script setup>
-import { reactive } from 'vue'
 import RouterLink from '@/components/UI/RouterLink.vue'
 import Heading from '@/components/UI/Heading.vue'
 import { FormKit } from '@formkit/vue'

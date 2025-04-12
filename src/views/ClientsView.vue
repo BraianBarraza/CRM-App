@@ -8,9 +8,11 @@ const clients = ref([])
 
 onMounted(() => {
   axios('http://localhost:4000/clients') //Get is the default method so it can be omitted
-    .then(({data}) => clients.value = data)
+    .then(({data}) => {
+      clients.value = data
+      window.location.href = 'AddClientView.vue'
+    })
     .catch((error) => console.log('Not Data Found', error))
-
 })
 
 defineProps({
