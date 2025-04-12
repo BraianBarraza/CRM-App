@@ -1,4 +1,53 @@
 {
-  "clients": [
+  "customers": [
+    {
+      "id": "aab9",
+      "name": "Braian",
+      "lastName": "Barraza",
+      "email": "braian_019@hotmail.com",
+      "phoneNumber": "017677668526"
+    },
+    {
+      "id": "ddd9",
+      "name": "Braian",
+      "lastName": "Barraza",
+      "email": "braian_019@hotmail.com",
+      "phoneNumber": "017677668526"
+    },
+    {
+      "id": "e359",
+      "name": "Braian",
+      "lastName": "Barraza",
+      "email": "braian_019@hotmail.com",
+      "phoneNumber": "017677668526"
+    },
+    {
+      "id": "c5d0",
+      "name": "Braian",
+      "lastName": "Barraza",
+      "email": "braian_019@hotmail.com",
+      "phoneNumber": "017677668526"
+    },
+    {
+      "id": "c2b6",
+      "name": "Braian",
+      "lastName": "Barraza",
+      "email": "braian_019@hotmail.com",
+      "phoneNumber": "017677668526"
+    },
+    {
+      "id": "ed80",
+      "name": "Braian2",
+      "lastName": "Barraza",
+      "email": "braian_019@hotmail.com",
+      "phoneNumber": "017677668526"
+    },
+    {
+      "id": "af19",
+      "name": "Braian3",
+      "lastName": "Barraza",
+      "email": "braian_019@hotmail.com",
+      "phoneNumber": "017677668526"
+    }
   ]
 }

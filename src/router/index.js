@@ -1,23 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ClientsView from '@/views/ClientsView.vue'
+import CustomerView from '@/views/CustomerView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'clients',
-      component: ClientsView,
+      name: 'customer-list',
+      component: CustomerView,
       props:{
-        title:'Clients',
+        title:'Customer',
       }
     },
     {
-      path: '/add-client',
-      name: 'addClient',
-      component: () => import('../views/AddClientView.vue'),
+      path: '/add-customer',
+      name: 'addCustomer',
+      component: () => import('../views/AddCustomerView.vue'),
       props:{
-        title:'Add Client',
+        title:'Add Customer',
       }
     },
   ],
