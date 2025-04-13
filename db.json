@@ -1,62 +1,24 @@
 {
   "customers": [
     {
-      "id": "aab9",
+      "id": "e8d4",
       "name": "Braian",
       "lastName": "Barraza",
       "email": "braian_019@hotmail.com",
-      "phoneNumber": "017677668526"
-    },
-    {
-      "id": "ddd9",
-      "name": "Braian",
-      "lastName": "Barraza",
-      "email": "braian_019@hotmail.com",
-      "phoneNumber": "017677668526"
-    },
-    {
-      "id": "e359",
-      "name": "Braian",
-      "lastName": "Barraza",
-      "email": "braian_019@hotmail.com",
-      "phoneNumber": "017677668526"
-    },
-    {
-      "id": "c5d0",
-      "name": "Braian",
-      "lastName": "Barraza",
-      "email": "braian_019@hotmail.com",
-      "phoneNumber": "017677668526"
-    },
-    {
-      "id": "c2b6",
-      "name": "Braian",
-      "lastName": "Barraza",
-      "email": "braian_019@hotmail.com",
-      "phoneNumber": "017677668526"
-    },
-    {
-      "id": "ed80",
-      "name": "Braian2",
-      "lastName": "Barraza",
-      "email": "braian_019@hotmail.com",
-      "phoneNumber": "017677668526"
-    },
-    {
-      "id": "af19",
-      "name": "Braian3",
-      "lastName": "Barraza",
-      "email": "braian_019@hotmail.com",
-      "phoneNumber": "017677668526"
-    },
-    {
-      "id": "e8de",
-      "name": "Ana",
-      "lastName": "Gomez",
-      "email": "braianbarraza19@gmail.com",
       "phoneNumber": "017677668526",
       "company": "Brian Freelancer",
-      "position": "HR"
+      "role": "CEO",
+      "state": 1
+    },
+    {
+      "id": "e8d4",
+      "name": "Ana",
+      "lastName": "Barraza",
+      "email": "braian_019@hotmail.com",
+      "phoneNumber": "017677668526",
+      "company": "Brian Freelancer",
+      "role": "HR",
+      "state": 0
     }
   ]
 }

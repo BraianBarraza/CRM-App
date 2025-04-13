@@ -14,10 +14,11 @@ defineProps({
 })
 
 const handleSubmit = (data) => {
-    CustomerService.addCustomer(data)
+  data.state = 1
+  CustomerService.addCustomer(data)
     .then(response => {
       console.log(response)
-      router.push({name: 'customer-list'})
+      router.push({ name: 'customer-list' })
     })
     .catch(err => console.log(err))
 }
@@ -68,8 +69,8 @@ const handleSubmit = (data) => {
             :validation-messages="{ matches: `Invalid number, use ''-'' to separate the number` }"
           />
           <FormKit type="text" label="Company" name="company" placeholder="Customer Company" />
-          <FormKit type="text" label="Position" name="position"
-                   placeholder="Customer Company Position" />
+          <FormKit type="text" label="Role" name="role"
+                   placeholder="Customer Role" />
         </FormKit>
       </div>
     </div>
