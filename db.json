@@ -48,6 +48,15 @@
       "lastName": "Barraza",
       "email": "braian_019@hotmail.com",
       "phoneNumber": "017677668526"
+    },
+    {
+      "id": "e8de",
+      "name": "Ana",
+      "lastName": "Gomez",
+      "email": "braianbarraza19@gmail.com",
+      "phoneNumber": "017677668526",
+      "company": "Brian Freelancer",
+      "position": "HR"
     }
   ]
 }

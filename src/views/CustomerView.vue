@@ -1,6 +1,6 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
-import axios from 'axios'
+import CustomerService from '@/services/CustomerService.js'
 import RouterLink from '@/components/UI/RouterLink.vue'
 import Heading from '@/components/UI/Heading.vue'
 import Customer from '@/components/Customer.vue'
@@ -8,7 +8,7 @@ import Customer from '@/components/Customer.vue'
 const customers = ref([])
 
 onMounted(() => {
-  axios('http://localhost:3000/customers') //Get is the default method so it can be omitted
+  CustomerService.getClients()
     .then(({data}) => {
       customers.value = data
     })
@@ -47,9 +47,9 @@ const customersExistence = computed(() => customers.value.length > 0)
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
               <Customer
-              v-for="customer in Customers"
+              v-for="customer in customers"
               :key="customer.id"
-              :Customer="customer"/>
+              :customer="customer"/>
             </tbody>
           </table>
         </div>

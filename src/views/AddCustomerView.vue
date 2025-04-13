@@ -1,7 +1,7 @@
 <script setup>
-import axios from 'axios'
 import { FormKit } from '@formkit/vue'
 import { useRouter } from 'vue-router'
+import CustomerService from '@/services/CustomerService.js'
 import RouterLink from '@/components/UI/RouterLink.vue'
 import Heading from '@/components/UI/Heading.vue'
 
@@ -14,10 +14,10 @@ defineProps({
 })
 
 const handleSubmit = (data) => {
-  axios.post('http://localhost:3000/customers', data)
+    CustomerService.addCustomer(data)
     .then(response => {
       console.log(response)
-      router.push({name: customer-list})
+      router.push({name: 'customer-list'})
     })
     .catch(err => console.log(err))
 }
