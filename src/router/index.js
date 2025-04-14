@@ -8,19 +8,27 @@ const router = createRouter({
       path: '/',
       name: 'customer-list',
       component: CustomerView,
-      props:{
-        title:'Customer',
+      props: {
+        title: 'Customer'
       }
     },
     {
       path: '/add-customer',
-      name: 'addCustomer',
+      name: 'add-customer',
       component: () => import('../views/AddCustomerView.vue'),
-      props:{
-        title:'Add Customer',
+      props: {
+        title: 'Add Customer'
       }
     },
-  ],
+    {
+      path: '/edit-customer/:id',
+      name: 'edit-customer',
+      component: () => import('../views/EditCustomerView.vue'),
+      props: {
+        title: 'Edit Customer'
+      }
+    }
+  ]
 })
 
 export default router

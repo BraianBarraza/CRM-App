@@ -8,7 +8,7 @@ import Customer from '@/components/Customer.vue'
 const customers = ref([])
 
 onMounted(() => {
-  CustomerService.getClients()
+  CustomerService.getCustomers()
     .then(({data}) => {
       customers.value = data
     })
@@ -27,7 +27,7 @@ const customersExistence = computed(() => customers.value.length > 0)
 <template>
   <div>
     <div class="flex justify-end">
-      <RouterLink to="addCustomer">
+      <RouterLink to="add-customer">
         Add Customer
       </RouterLink>
     </div>
