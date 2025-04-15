@@ -4,6 +4,7 @@ import CustomerService from '@/services/CustomerService.js'
 import RouterLink from '@/components/UI/RouterLink.vue'
 import Heading from '@/components/UI/Heading.vue'
 import Customer from '@/components/Customer.vue'
+import customerService from '@/services/CustomerService.js'
 
 const customers = ref([])
 
@@ -22,6 +23,23 @@ defineProps({
 })
 
 const customersExistence = computed(() => customers.value.length > 0)
+
+const updateState = ({id, state}) =>{
+  customerService.changeState(id, {state: !state})
+    .then(()=>{
+      const i = customers.value.findIndex(customer => customer.id === id)
+      customers.value[i].state = !state
+    })
+    .catch((error) => console.log(error))
+}
+
+const deleteCustomer = (id) => {
+  customerService.deleteCustomer(id)
+    .then(()=>{
+
+    })
+    .catch((error) => console.log(error))
+}
 </script>
 
 <template>
@@ -49,7 +67,9 @@ const customersExistence = computed(() => customers.value.length > 0)
               <Customer
               v-for="customer in customers"
               :key="customer.id"
-              :customer="customer"/>
+              :customer="customer"
+              @update-state="updateState"
+              @delete-customer="deleteCustomer"/>
             </tbody>
           </table>
         </div>

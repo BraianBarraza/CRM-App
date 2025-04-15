@@ -1,24 +1,33 @@
 {
   "customers": [
     {
-      "id": "e8d4",
-      "name": "Braian",
+      "id": "a1ca",
+      "name": "Braian C",
       "lastName": "Barraza",
       "email": "braian_019@hotmail.com",
       "phoneNumber": "017677668526",
-      "company": "Brian Freelancer",
+      "company": "BB TECH",
       "role": "CEO",
       "state": 1
     },
     {
-      "id": "e8d4",
+      "id": "f452",
       "name": "Ana",
+      "lastName": "Barraza",
+      "email": "braianbarraza19@gmail.com",
+      "phoneNumber": "017677668526",
+      "company": "Brian Freelancer",
+      "state": false
+    },
+    {
+      "id": "d041",
+      "name": "Samuel",
       "lastName": "Barraza",
       "email": "braian_019@hotmail.com",
       "phoneNumber": "017677668526",
-      "company": "Brian Freelancer",
+      "company": "BB TECH",
       "role": "HR",
-      "state": 0
+      "state": 1
     }
   ]
 }

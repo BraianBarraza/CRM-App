@@ -10,23 +10,12 @@ const router = useRouter()
 const route = useRoute()
 
 const { id } = route.params
-const formData  = reactive({
-  name: '',
-  lastName: '',
-  email: '',
-  phoneNumber: '',
-  company:'',
-  role:'',
-
-})
+const formData  = reactive({})
 
 onMounted(() => {
 customerService.getCustomer(id)
   .then(({data}) => {
-    formData.name = data.name
-    formData.lastName = data.lastName
-    formData.email = data.email
-    formData.phoneNumber = data.phoneNumber
+    Object.assign(formData, data)
   })
   .catch((error) => { console.log(error) })
 })
@@ -38,7 +27,9 @@ defineProps({
 })
 
 const handleSubmit = (data) => {
-
+  customerService.updateCustomer(id, data)
+  .then(() => router.push({name: 'customer-list'}))
+    .catch((error) => { console.log(error) })
 }
 
 </script>
@@ -55,7 +46,7 @@ const handleSubmit = (data) => {
       <div class="mx-auto md:w-2/3 py-20 px-6">
 
         <FormKit type="form"
-                 submit-label="Add Customer"
+                 submit-label="Save Changes"
                  @submit="handleSubmit"
                  :value="formData">
 
